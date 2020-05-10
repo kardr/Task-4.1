@@ -8,7 +8,7 @@ namespace Task_4._1
 {
     class Program
     {
-        private static double Rec(double i, double n)
+        private static double Rec(double i, int n)
         {
             return i < n ? Math.Sqrt(i + Rec(++i, n)) : Math.Sqrt(i);
         }
@@ -16,7 +16,7 @@ namespace Task_4._1
         static void Main(string[] args)
         {
             Console.WriteLine("Введите N: ");
-            var n = Convert.ToInt32(Console.ReadLine());
+            int n = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Результат: " + n / Rec(1, n));
             Console.ReadLine();
         }
