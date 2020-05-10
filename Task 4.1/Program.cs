@@ -17,7 +17,14 @@ namespace Task_4._1
         {
             Console.WriteLine("Введите N: ");
             int n = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Результат: " + n / Rec(1, n));
+            if (n > 0)
+            {
+                Console.WriteLine("Результат: " + n / Rec(1, n));
+            }
+            else if (n < 0)
+                Console.WriteLine("Ошибка: N меньше 0");
+            else if (n == 0)
+                Console.WriteLine("Ошибка: N = 0");
             Console.ReadLine();
         }
     }
